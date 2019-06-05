@@ -171,17 +171,18 @@ Since we're using some git commands a lot and we don't want to get tired of them
 
 Executing the command below sets the following aliases for us:  
 
-| Shorthand               | Command description                                                                       |
-| ----------------------- | ----------------------------------------------------------------------------------------- |
-| __git s__               | git status                                                                                |
-| __git df *\<id\>*__     | show files which were changed in the commit with id...                                    |
-| __git tree__            | shows diagram of branches with commits visually in a tree (add --all to see all branches) |
-| __git l__               | shows the last commits on this branch history                                             |
-| __git co *\<branch\>*__ | git checkout                                                                              |
-| __git ci__              | git commit                                                                                |
-| __git br__              | git branch                                                                                |
-| __git a__               | git add                                                                                   |
-| __git d__               | git difftool                                                                              |
+| Shorthand               | Command description                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
+| __git s__               | git status                                                                                                |
+| __git df *\<id\>*__     | show files which were changed in the commit with id...                                                    |
+| __git tree__            | shows diagram of branches with commits visually in a tree (add --all to see all branches)                 |
+| __git l__               | shows the last commits on this branch history                                                             |
+| __git co *\<branch\>*__ | git checkout                                                                                              |
+| __git ci__              | git commit                                                                                                |
+| __git br__              | git branch                                                                                                |
+| __git a__               | git add                                                                                                   |
+| __git d__               | git difftool                                                                                              |
+| __git dirdiff__         | compare the whole folder structure to the previous version (only available if BeyondCompare is installed) |
 
 
 ```bash
@@ -195,6 +196,7 @@ git config --global alias.ci commit &&\
 git config --global alias.br branch &&\
 git config --global alias.a add &&\
 git config --global alias.d difftool
+git config --global alias.dirdiff "difftool --dir-diff --tool=bc --no-prompt"
 ```
 Go ahead and try some of the commands now!
 
