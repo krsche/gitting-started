@@ -7,6 +7,7 @@
   - [1.1 Installation](#11-installation)
     - [1.1.1 Git](#111-git)
     - [1.1.2 VisualStudio Code](#112-visualstudio-code)
+    - [1.1.3 (optional) BeyondCompare](#113-optional-beyondcompare)
   - [1.2 References](#12-references)
     - [1.2.1 Git SCM Documentation / Tutorials](#121-git-scm-documentation--tutorials)
     - [1.2.2 Git Cheatsheet](#122-git-cheatsheet)
@@ -54,6 +55,8 @@ __UBUNTU:__
 __WINDOWS:__  
 https://code.visualstudio.com/download
 
+### 1.1.3 (optional) BeyondCompare
+https://www.scootersoftware.com/download.php
 
 ## 1.2 References
 ### 1.2.1 Git SCM Documentation / Tutorials
