@@ -6,10 +6,12 @@
     - [1.1.1 Git](#111-git)
     - [1.1.2 VisualStudio Code](#112-visualstudio-code)
   - [1.2 References](#12-references)
-    - [1.2.1 Git Cheatsheet](#121-git-cheatsheet)
-    - [1.2.2 Visualizing Git](#122-visualizing-git)
-    - [1.2.3 GitFlow](#123-gitflow)
-    - [1.2.4 GitHub](#124-github)
+    - [1.2.1 Git SCM Documentation / Tutorials](#121-git-scm-documentation--tutorials)
+    - [1.2.2 Git Cheatsheet](#122-git-cheatsheet)
+    - [1.2.3 Visualizing Git](#123-visualizing-git)
+    - [1.2.4 GitFlow](#124-gitflow)
+    - [1.2.5 GitHub](#125-github)
+- [2. Showcase](#2-showcase)
 - [2. Follow Along](#2-follow-along)
   - [2.1 Prerequisites](#21-prerequisites)
   - [2.2 Configuring Git](#22-configuring-git)
@@ -44,21 +46,26 @@ https://code.visualstudio.com/download
 
 
 ## 1.2 References
-### 1.2.1 Git Cheatsheet
+### 1.2.1 Git SCM Documentation / Tutorials
+https://git-scm.com/doc
+
+### 1.2.2 Git Cheatsheet
 https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
 
-### 1.2.2 Visualizing Git
+### 1.2.3 Visualizing Git
 http://git-school.github.io/visualizing-git/#free-remote
 
-### 1.2.3 GitFlow
+### 1.2.4 GitFlow
 https://www.bluesource.at/fileadmin/user_upload/bluesource/Wissen/Detailseite/git-model.jpg
 
-### 1.2.4 GitHub
+### 1.2.5 GitHub
 https://github.com  
 **GitHub Education Sponsoring**  
 https://education.github.com/
 
 
+# 2. Showcase
+See --> https://github.com/espressif/esp-idf
 
 # 2. Follow Along
 ## 2.1 Prerequisites
@@ -249,7 +256,7 @@ You can think of it as another repository where you and your colleagues work on 
 ![Git Local-Remote repository](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xeH0cVulHlOPWX_29FCi6k5jDIO-ffy8ETkxueIVYJb99g5pew)
 
 First of all, lets create a remote repository somewhere.
-Let's use GitHub for now. Go to the website referenced in [1.2.4 GitHub](1.2.4-github) and create a account using your Email-Address
+Let's use GitHub for now. Go to the website referenced in [1.2.5 GitHub](1.2.5-github) and create a account using your Email-Address
 
 When you're logged in, __create a new private repository__ for our tutorial and name it __*hse_git_tutorial*__
 
