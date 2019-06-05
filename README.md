@@ -14,21 +14,21 @@
     - [1.2.4 GitFlow](#124-gitflow)
     - [1.2.5 GitHub](#125-github)
 - [2. Showcase](#2-showcase)
-- [2. Follow Along](#2-follow-along)
-  - [2.1 Prerequisites](#21-prerequisites)
-  - [2.2 Configuring Git](#22-configuring-git)
-  - [2.3 Creating a local repository](#23-creating-a-local-repository)
-  - [2.4 Adding Files](#24-adding-files)
-  - [2.5 Reviewing changes before commiting](#25-reviewing-changes-before-commiting)
-  - [2.6 Setting up git-aliases](#26-setting-up-git-aliases)
-  - [2.7 Using branches](#27-using-branches)
-  - [2.8 Navigating the History](#28-navigating-the-history)
-  - [2.9 Merging](#29-merging)
-  - [2.10 Git remotes](#210-git-remotes)
-  - [2.11 Authenticating using ssh](#211-authenticating-using-ssh)
-    - [2.11.1 Concept](#2111-concept)
-    - [2.11.2 Setup](#2112-setup)
-  - [2.12 Add a git remote](#212-add-a-git-remote)
+- [3. Follow Along](#3-follow-along)
+  - [3.1 Prerequisites](#31-prerequisites)
+  - [3.2 Configuring Git](#32-configuring-git)
+  - [3.3 Creating a local repository](#33-creating-a-local-repository)
+  - [3.4 Adding Files](#34-adding-files)
+  - [3.5 Reviewing changes before commiting](#35-reviewing-changes-before-commiting)
+  - [3.6 Setting up git-aliases](#36-setting-up-git-aliases)
+  - [3.7 Using branches](#37-using-branches)
+  - [3.8 Navigating the History](#38-navigating-the-history)
+  - [3.9 Merging](#39-merging)
+  - [3.10 Git remotes](#310-git-remotes)
+  - [3.11 Authenticating using ssh](#311-authenticating-using-ssh)
+    - [3.11.1 Concept](#3111-concept)
+    - [3.11.2 Setup](#3112-setup)
+  - [3.12 Add a git remote](#312-add-a-git-remote)
 
 ___
 
@@ -86,12 +86,12 @@ git gui
 ```
 
 
-# 2. Follow Along
-## 2.1 Prerequisites
+# 3. Follow Along
+## 3.1 Prerequisites
 * Git is installed (make sure the git_bash is installed aswell)
 * VSCode is installed
 
-## 2.2 Configuring Git  
+## 3.2 Configuring Git  
 If you're using Windows, replace the double quotes (") below with simple quotes (')
 ```bash
 git config --global user.name 'John Doe'
@@ -116,7 +116,7 @@ git config --global merge.tool bc3
 git config --global mergetool.bc3.trustExitCode true
 ```
 
-## 2.3 Creating a local repository
+## 3.3 Creating a local repository
 ```bash
 git init <foldername>
 cd <foldername>
@@ -128,7 +128,7 @@ git commit -m "Initial Commit"
 git status
 ```
 
-## 2.4 Adding Files
+## 3.4 Adding Files
 ```bash
 echo "# This is a Test-Repository!" >> readme.md
 cat readme.md
@@ -141,7 +141,7 @@ git status
 git commit -m "added a nice python script"
 ```
 
-## 2.5 Reviewing changes before commiting
+## 3.5 Reviewing changes before commiting
 ```bash
 printf "# This is a Test-Repository\nIt includes a very nice python script :)" > readme.md
 git status
@@ -162,7 +162,7 @@ git status
 git log
 ```
 
-## 2.6 Setting up git-aliases
+## 3.6 Setting up git-aliases
 __!!! This step is optional, but in !!!__  
 Since we're using some git commands a lot and we don't want to get tired of them let's set up some shorthands using git-aliases. : )  
 
@@ -195,8 +195,8 @@ git config --global alias.d difftool
 ```
 Go ahead and try some of the commands now!
 
-## 2.7 Using branches
-Go ahead and have a look at the website from __[1.2.2 Visualizing Git](#1.2.2-visualizing-git)__
+## 3.7 Using branches
+Go ahead and have a look at the website from __[1.2.3 Visualizing Git](#123-visualizing-git)__
 
 ```bash
 git branch
@@ -224,7 +224,7 @@ git tree --all
 
 
 
-## 2.8 Navigating the History
+## 3.8 Navigating the History
 One of the real handy features of version control is that you can roll-back to an older version of your repository and do stuff there.
 Let's look into that now...
 
@@ -254,7 +254,7 @@ git tree --all
 
 ```
 
-## 2.9 Merging
+## 3.9 Merging
 Merging can get tricky. Here is a simple example. We're merging the feature branch back into our develop branch. There are no conflicts because we we're working on different sections/files.
 
 ```bash
@@ -267,7 +267,7 @@ __--> Now try to merge the develop branch back into our master branch__
 
 
 
-## 2.10 Git remotes
+## 3.10 Git remotes
 
 Git remotes are the git servers we're using.
 You can think of it as another repository where you and your colleagues work on together.
@@ -275,19 +275,19 @@ You can think of it as another repository where you and your colleagues work on 
 ![Git Local-Remote repository](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xeH0cVulHlOPWX_29FCi6k5jDIO-ffy8ETkxueIVYJb99g5pew)
 
 First of all, lets create a remote repository somewhere.
-Let's use GitHub for now. Go to the website referenced in [1.2.5 GitHub](1.2.5-github) and create a account using your Email-Address
+Let's use GitHub for now. Go to the website referenced in [1.2.5 GitHub](125-github) and create a account using your Email-Address
 
 When you're logged in, __create a new private repository__ for our tutorial and name it __*hse_git_tutorial*__
 
-## 2.11 Authenticating using ssh
+## 3.11 Authenticating using ssh
 We use ssh to authenticate us against the GitHub Server. This prevents your neighbor from pushing to your repo... :)  
 
-### 2.11.1 Concept  
+### 3.11.1 Concept  
 SSH generates a private and public key pair. The public key is used to encrypt data and you can share it with *everyone*. The private key on the other hand is used to decrypt data which has been encrypted using the corresponding public-key. It's like your password for decrypting the data.  
 In addition to that, I highly recommend using a password to encrypt the private key.  
 This way an attacker needs access to your private key AND your secret password to decrypt the data - or in our case, authenticate to the GitHub server.
 
-### 2.11.2 Setup
+### 3.11.2 Setup
 __Create an SSH-keypair__  
 https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
@@ -300,7 +300,7 @@ https://help.github.com/en/articles/testing-your-ssh-connection
 ssh -T git@github.com
 ```
 
-## 2.12 Add a git remote
+## 3.12 Add a git remote
 
 Now we're adding this remote repository to our existing repo as a *remote* called *origin*
 ```bash
