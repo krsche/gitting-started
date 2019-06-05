@@ -23,6 +23,10 @@
   - [2.8 Navigating the History](#28-navigating-the-history)
   - [2.9 Merging](#29-merging)
   - [2.10 Git remotes](#210-git-remotes)
+  - [2.11 Authenticating using ssh](#211-authenticating-using-ssh)
+    - [2.11.1 Concept](#2111-concept)
+    - [2.11.2 Setup](#2112-setup)
+  - [2.12 Add a git remote](#212-add-a-git-remote)
 
 ___
 
@@ -65,7 +69,16 @@ https://education.github.com/
 
 
 # 2. Showcase
-See --> https://github.com/espressif/esp-idf
+https://github.com/espressif/esp-idf
+
+```bash
+git clone --recursive -b master https://github.com/espressif/esp-idf.git
+```
+
+```bash
+git gui
+```
+
 
 # 2. Follow Along
 ## 2.1 Prerequisites
@@ -259,6 +272,29 @@ First of all, lets create a remote repository somewhere.
 Let's use GitHub for now. Go to the website referenced in [1.2.5 GitHub](1.2.5-github) and create a account using your Email-Address
 
 When you're logged in, __create a new private repository__ for our tutorial and name it __*hse_git_tutorial*__
+
+## 2.11 Authenticating using ssh
+We use ssh to authenticate us against the GitHub Server. This prevents your neighbor from pushing to your repo... :)  
+
+### 2.11.1 Concept  
+SSH generates a private and public key pair. The public key is used to encrypt data and you can share it with *everyone*. The private key on the other hand is used to decrypt data which has been encrypted using the corresponding public-key. It's like your password for decrypting the data.  
+In addition to that, I highly recommend using a password to encrypt the private key.  
+This way an attacker needs access to your private key AND your secret password to decrypt the data - or in our case, authenticate to the GitHub server.
+
+### 2.11.2 Setup
+__Create an SSH-keypair__  
+https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+__Add the public key to your GitHub account__  
+https://help.github.com/en/enterprise/2.16/user/articles/adding-a-new-ssh-key-to-your-github-account
+
+__Test the connection__  
+https://help.github.com/en/articles/testing-your-ssh-connection
+```bash
+ssh -T git@github.com
+```
+
+## 2.12 Add a git remote
 
 Now we're adding this remote repository to our existing repo as a *remote* called *origin*
 ```bash
